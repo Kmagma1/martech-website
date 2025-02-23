@@ -15,14 +15,7 @@ app.use(express.json())
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'build')))
 
-const transporter = nodemailer.createTransport({
-  service: 'Gmail',
-  auth: {
-    user: 'your-email@gmail.com', // Replace with your email
-    pass: 'your-email-password', // Replace with your email password
-  },
-})
-
+// API endpoint
 app.post('/send', (req, res) => {
   const { name, email, message } = req.body
 
@@ -32,6 +25,14 @@ app.post('/send', (req, res) => {
     subject: `New Message from ${name}`,
     text: message,
   }
+
+  const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: 'your-email@gmail.com', // Replace with your email
+      pass: 'your-email-password', // Replace with your email password
+    },
+  })
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
@@ -46,6 +47,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
 
-app.listen(5002, () => {
-  console.log('Server is running on port 5002')
+const PORT = process.env.PORT || 5000
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`)
 })
