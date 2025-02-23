@@ -1,87 +1,144 @@
 import React from 'react'
-import { FaPython, FaNodeJs, FaDatabase, FaPhp, FaCss3Alt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import {
+  FaLinux,
+  FaWindows,
+  FaApple,
+  FaPython,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaDatabase,
+  FaReact,
+  FaBootstrap,
+  FaPhp,
+  FaChartLine,
+} from 'react-icons/fa'
+import { SiDjango, SiPostgresql, SiAdobephotoshop, SiCoreldraw, SiCanva, SiCisco } from 'react-icons/si'
+import { GrOracle } from 'react-icons/gr'
+import { BsTools } from 'react-icons/bs'
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-white text-wine p-8">
-      <h1 className="text-4xl font-bold mb-8 text-center">About Me</h1>
+    <div className="min-h-screen">
+      {/* Header */}
+      <Header />
 
-      {/* Background Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="mb-12"
-      >
-        <h2 className="text-2xl font-bold mb-4">Background</h2>
-        <p className="text-lg leading-relaxed">
-          I'm a passionate tech educator and full-stack developer with over 5 years of experience in teaching and building innovative solutions. My journey in tech began with a love for problem-solving, and I've since dedicated myself to helping others learn and grow in this ever-evolving field.
-        </p>
-      </motion.section>
+      {/* Main Content */}
+      <div className="pt-24 px-6 pb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-6xl mx-auto"
+        >
+          <h1 className="text-4xl font-bold mb-8 text-center text-wine">About Me</h1>
 
-      {/* Skills Section */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-4">Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <div className="bg-gray-100 p-4 rounded-lg text-center">
-            <FaPython className="text-3xl mx-auto mb-2" />
-            <h3 className="font-semibold">Django</h3>
-          </div>
-          <div className="bg-gray-100 p-4 rounded-lg text-center">
-            <FaNodeJs className="text-3xl mx-auto mb-2" />
-            <h3 className="font-semibold">Express.js</h3>
-          </div>
-          <div className="bg-gray-100 p-4 rounded-lg text-center">
-            <FaDatabase className="text-3xl mx-auto mb-2" />
-            <h3 className="font-semibold">PostgreSQL</h3>
-          </div>
-          <div className="bg-gray-100 p-4 rounded-lg text-center">
-            <FaPhp className="text-3xl mx-auto mb-2" />
-            <h3 className="font-semibold">PHP</h3>
-          </div>
-          <div className="bg-gray-100 p-4 rounded-lg text-center">
-            <FaDatabase className="text-3xl mx-auto mb-2" />
-            <h3 className="font-semibold">MySQL</h3>
-          </div>
-          <div className="bg-gray-100 p-4 rounded-lg text-center">
-            <FaCss3Alt className="text-3xl mx-auto mb-2" />
-            <h3 className="font-semibold">Tailwind CSS</h3>
-          </div>
-        </div>
-      </section>
+          {/* Professional Summary */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-white p-8 rounded-lg shadow-lg mb-8"
+          >
+            <h2 className="text-2xl font-bold mb-4 text-wine">Professional Summary</h2>
+            <p className="text-lg text-gray-600">
+              Dynamic IT professional with over 10 years of expertise in teaching, IT management, and multimedia design. Adept at implementing technological solutions, mentoring students, and developing innovative educational programs. Proven track record of success in database administration, programming, and preparing students for national academic competitions. Recognized for leadership, problem-solving, and technical skills that drive organizational and student success.
+            </p>
+          </motion.div>
 
-      {/* Career Timeline Section */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-4">Career Timeline</h2>
-        <div className="space-y-4">
-          <div className="border-l-4 border-wine pl-4">
-            <h3 className="font-semibold">Tech Educator</h3>
-            <p className="text-gray-600">Rhomicom | 2020 - Present</p>
-          </div>
-          <div className="border-l-4 border-wine pl-4">
-            <h3 className="font-semibold">Full-Stack Developer</h3>
-            <p className="text-gray-600">Yes You Can Multimedia | 2018 - 2020</p>
-          </div>
-          <div className="border-l-4 border-wine pl-4">
-            <h3 className="font-semibold">IT Instructor</h3>
-            <p className="text-gray-600">Glorious Child School | 2016 - 2018</p>
-          </div>
-        </div>
-      </section>
+          {/* Technical Skills */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-white p-8 rounded-lg shadow-lg"
+          >
+            <h2 className="text-2xl font-bold mb-4 text-wine">Technical Skills</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-wine flex items-center">
+                  <BsTools className="mr-2" /> Operating Systems
+                </h3>
+                <ul className="text-gray-600">
+                  <li className="flex items-center"><FaLinux className="mr-2" /> Linux</li>
+                  <li className="flex items-center"><FaWindows className="mr-2" /> Windows OS</li>
+                  <li className="flex items-center"><FaApple className="mr-2" /> macOS</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-wine flex items-center">
+                  <BsTools className="mr-2" /> Programming Languages
+                </h3>
+                <ul className="text-gray-600">
+                  <li className="flex items-center"><FaPython className="mr-2" /> Python</li>
+                  <li className="flex items-center"><FaHtml5 className="mr-2" /> HTML</li>
+                  <li className="flex items-center"><FaCss3Alt className="mr-2" /> CSS</li>
+                  <li className="flex items-center"><FaJs className="mr-2" /> JavaScript</li>
+                  <li className="flex items-center"><FaPhp className="mr-2" /> PHP</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-wine flex items-center">
+                  <BsTools className="mr-2" /> Database Management
+                </h3>
+                <ul className="text-gray-600">
+                  <li className="flex items-center"><FaDatabase className="mr-2" /> SQL</li>
+                  <li className="flex items-center"><GrOracle className="mr-2" /> Oracle</li>
+                  <li className="flex items-center"><FaDatabase className="mr-2" /> MySQL</li>
+                  <li className="flex items-center"><SiPostgresql className="mr-2" /> PostgreSQL</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-wine flex items-center">
+                  <BsTools className="mr-2" /> Frameworks & Libraries
+                </h3>
+                <ul className="text-gray-600">
+                  <li className="flex items-center"><FaReact className="mr-2" /> React</li>
+                  <li className="flex items-center"><SiDjango className="mr-2" /> Django</li>
+                  <li className="flex items-center"><FaBootstrap className="mr-2" /> Bootstrap</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-wine flex items-center">
+                  <BsTools className="mr-2" /> Software Tools
+                </h3>
+                <ul className="text-gray-600">
+                  <li className="flex items-center">Microsoft Office Suite</li>
+                  <li className="flex items-center"><SiAdobephotoshop className="mr-2" /> Adobe Photoshop</li>
+                  <li className="flex items-center"><SiCoreldraw className="mr-2" /> CorelDRAW</li>
+                  <li className="flex items-center"><SiCanva className="mr-2" /> Canva</li>
+                  <li className="flex items-center"><FaChartLine className="mr-2" /> Power BI</li>
+                  <li className="flex items-center"><SiCisco className="mr-2" /> Cisco Packet Tracer</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-wine flex items-center">
+                  <BsTools className="mr-2" /> Networking
+                </h3>
+                <ul className="text-gray-600">
+                  <li>Computer Communications</li>
+                  <li>IT Support</li>
+                  <li>System Maintenance</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-wine flex items-center">
+                  <BsTools className="mr-2" /> Multimedia Design
+                </h3>
+                <ul className="text-gray-600">
+                  <li>Graphic Design </li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
 
-      {/* Certifications Section */}
-      <section>
-        <h2 className="text-2xl font-bold mb-4">Certifications</h2>
-        <div className="space-y-4">
-          <div className="bg-gray-100 p-4 rounded-lg">
-            <h3 className="font-semibold">Google IT Support Professional Certificate</h3>
-          </div>
-          <div className="bg-gray-100 p-4 rounded-lg">
-            <h3 className="font-semibold">GIMPA IT Diploma</h3>
-          </div>
-        </div>
-      </section>
+      {/* Footer */}
+      <Footer />
     </div>
   )
 } 

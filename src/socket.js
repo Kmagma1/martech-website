@@ -1,6 +1,6 @@
 import { io } from 'socket.io-client'
 
-const socket = io('http://localhost:3004', {
+const socket = io('https://your-backend-url.com', {
   transports: ['websocket'],
 })
 

@@ -41,26 +41,26 @@ export default function Chat() {
   }
 
   return (
-    <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4">Chat</h2>
-      <div className="space-y-4">
+    <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl mt-8">
+      <h2 className="text-2xl font-bold mb-6 text-gray-900">Chat</h2>
+      <div className="space-y-4 h-64 overflow-y-auto mb-6">
         {messages.map((msg) => (
-          <div key={msg.id} className="bg-white p-4 rounded-lg">
-            <p>{msg.text}</p>
+          <div key={msg.id} className="bg-gray-50 p-4 rounded-lg">
+            <p className="text-gray-800">{msg.text}</p>
           </div>
         ))}
       </div>
-      <form onSubmit={sendMessage} className="mt-4">
+      <form onSubmit={sendMessage} className="flex gap-2">
         <input
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded-lg"
+          className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-wine"
           placeholder="Type a message..."
         />
         <button
           type="submit"
-          className="bg-wine text-white px-4 py-2 mt-2 rounded-lg hover:bg-opacity-90"
+          className="bg-wine text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition duration-300"
         >
           Send
         </button>
