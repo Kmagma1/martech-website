@@ -50,6 +50,66 @@ export default function Portfolio() {
         { name: 'CSS', icon: <FaCss3Alt className="w-6 h-6" /> },
       ],
     },
+    {
+      title: 'Task Manager App',
+      description:
+        'A task management application built with React and Firebase for real-time updates.',
+      technologies: [
+        { name: 'React', icon: <FaReact className="w-6 h-6" /> },
+        { name: 'Firebase', icon: <FaDatabase className="w-6 h-6" /> },
+        { name: 'JavaScript', icon: <FaJs className="w-6 h-6" /> },
+      ],
+    },
+    {
+      title: 'E-Commerce Platform',
+      description:
+        'A fully functional e-commerce platform built with PHP, MySQL, and Bootstrap.',
+      technologies: [
+        { name: 'PHP', icon: <FaPhp className="w-6 h-6" /> },
+        { name: 'MySQL', icon: <SiMysql className="w-6 h-6" /> },
+        { name: 'Bootstrap', icon: <FaBootstrap className="w-6 h-6" /> },
+      ],
+    },
+    {
+      title: 'Weather App',
+      description:
+        'A weather application that fetches real-time weather data using a public API.',
+      technologies: [
+        { name: 'React', icon: <FaReact className="w-6 h-6" /> },
+        { name: 'JavaScript', icon: <FaJs className="w-6 h-6" /> },
+        { name: 'CSS', icon: <FaCss3Alt className="w-6 h-6" /> },
+      ],
+    },
+    {
+      title: 'Blog Platform',
+      description:
+        'A blogging platform built with PHP, MySQL, and Bootstrap for content management.',
+      technologies: [
+        { name: 'PHP', icon: <FaPhp className="w-6 h-6" /> },
+        { name: 'MySQL', icon: <SiMysql className="w-6 h-6" /> },
+        { name: 'Bootstrap', icon: <FaBootstrap className="w-6 h-6" /> },
+      ],
+    },
+    {
+      title: 'Portfolio Website',
+      description:
+        'A personal portfolio website built with React and Tailwind CSS.',
+      technologies: [
+        { name: 'React', icon: <FaReact className="w-6 h-6" /> },
+        { name: 'Tailwind CSS', icon: <FaCss3Alt className="w-6 h-6" /> },
+        { name: 'JavaScript', icon: <FaJs className="w-6 h-6" /> },
+      ],
+    },
+    {
+      title: 'Chat Application',
+      description:
+        'A real-time chat application built with React and Firebase.',
+      technologies: [
+        { name: 'React', icon: <FaReact className="w-6 h-6" /> },
+        { name: 'Firebase', icon: <FaDatabase className="w-6 h-6" /> },
+        { name: 'JavaScript', icon: <FaJs className="w-6 h-6" /> },
+      ],
+    },
   ]
 
   return (
